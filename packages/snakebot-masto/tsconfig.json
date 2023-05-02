@@ -1,0 +1,19 @@
+{
+    "extends": "../../tsconfig.json",
+
+    "compilerOptions": {
+        "composite": true,
+        "rootDir": "src",
+        "moduleResolution": "node",
+        "declaration": true,
+        "sourceMap": true,
+        "outDir": "dist",
+        "lib": ["ESNext", "DOM"]
+    },
+    "include": ["./src"],
+    "references": [
+        {
+            "path": "../snakebot-core"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+.toot {
+    width: 400px;
+    background-color: #292c36;
+    padding: 16px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+}
+
+.toot > span {
+    user-select: text;
+}
+
+.toot_image_container {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex; /* why ???? without this the div becomes slightly bigger. why does it do that???????*/
+}
+
+.toot_image_container > img {
+    width: 100%;
+    height: auto;
+}

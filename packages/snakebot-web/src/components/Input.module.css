@@ -1,0 +1,19 @@
+.input {
+    border-radius: 4px;
+    background-color: #191b21;
+    padding: 4px;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+    border: none;
+    height: 32px;
+    flex-grow: 1;
+    outline: none;
+
+    box-shadow: inset 0px 0px 0px 0px red;
+    transition: box-shadow 0.25s;
+}
+
+.input_invalid {
+    box-shadow: inset 0px 0px 0px 2px red;
+}

@@ -1,0 +1,32 @@
+{
+    "name": "snakebot-web",
+    "private": true,
+    "author": "pipes5210",
+    "version": "1.0.0",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "start": "vite --host",
+        "lint": "tsc --noEmit && eslint . --fix",
+        "format": "prettier -w ."
+    },
+    "dependencies": {
+        "clsx": "^1.2.1",
+        "mobx": "^6.8.0",
+        "mobx-react-lite": "^3.4.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "snakebot-core": "*"
+    },
+    "devDependencies": {
+        "@types/offscreencanvas": "^2019.7.0",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "@vitejs/plugin-react-swc": "^3.0.0",
+        "eslint": "^8.34.0",
+        "prettier": "^2.8.4",
+        "typescript": "^4.9.5",
+        "vite": "^4.1.0",
+        "vite-plugin-node-polyfills": "^0.7.0"
+    }
+}

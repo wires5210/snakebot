@@ -1,0 +1,28 @@
+{
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "lib": ["esnext"]
+    },
+
+    "exclude": ["packages/**/dist", "packages/**/build", "packages/**/node_modules"],
+
+    "references": [
+        {
+            "path": "packages/snakebot-core"
+        },
+        {
+            "path": "packages/snakebot-masto"
+        },
+        {
+            "path": "packages/snakebot-web"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    overflow: hidden;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    background-color: #191b21;
+    color: white;
+    user-select: none;
+    overflow: visible;
+    height: 100%;
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+div#root {
+    height: 100%;
+}

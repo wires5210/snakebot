@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "format-all",
+            "problemMatcher": [],
+            "label": "npm: format-all",
+        },
+        {
+            "type": "npm",
+            "script": "lint-all",
+            "problemMatcher": ["$tsc", "$eslint-stylish"],
+            "label": "npm: lint-all",
+        },
+        {
+            "type": "npm",
+            "script": "start-web",
+            "problemMatcher": [],
+            "label": "npm: start-web",
+        },
+        {
+            "type": "npm",
+            "script": "start-bot",
+            "problemMatcher": [],
+            "label": "npm: start-bot",
+        }
+    ]
+}

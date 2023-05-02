@@ -1,0 +1,13 @@
+.round_list {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-right: 32px;
+}
+
+.round_list::-webkit-scrollbar {
+    background: #2a2c35;
+}
+
+.round_list::-webkit-scrollbar-thumb {
+    background: #494f5c;
+}

@@ -1,0 +1,4 @@
+{
+    "npm.packageManager": "npm",
+    "eslint.workingDirectories": [{ "mode": "auto" }]
+}

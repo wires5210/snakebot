@@ -1,0 +1,37 @@
+.round_inner {
+    background-color: #1f2229;
+    width: min-content;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.round:first-child {
+    margin-top: 32px;
+}
+
+.round:last-child {
+    margin-bottom: 32px;
+}
+
+.sidebar_outer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar::-webkit-scrollbar {
+    background: #2a2c35;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #494f5c;
+}
+
+.sidebar {
+    white-space: pre-wrap;
+    width: 300px;
+    overflow-y: scroll;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 1;
+}

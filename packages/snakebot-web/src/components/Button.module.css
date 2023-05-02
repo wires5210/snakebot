@@ -1,0 +1,25 @@
+.button {
+    background-color: #595aff;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 500;
+    width: auto;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    background-color: #6364ff;
+}
+
+.button_disabled {
+    background-color: transparent;
+    cursor: default;
+    border: 2px solid #717191;
+}
+
+.button_disabled:hover {
+    background-color: transparent;
+}

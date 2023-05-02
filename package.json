@@ -1,0 +1,32 @@
+{
+    "name": "snakebot",
+    "author": "pipes5210",
+    "version": "1.0.0",
+    "type": "module",
+    "license": "MIT",
+    "engines": {
+        "node": ">=16.9.0"
+    },
+    "scripts": {
+        "start-bot": "npm run -w snakebot-core build && npm run -w snakebot-masto start",
+        "start-web": "concurrently -c auto -n 'core,web' 'npm run -w snakebot-core watch' 'npm run -w snakebot-web start'",
+        "lint-all": "npm run lint --workspaces",
+        "format-all": "npm run format --workspaces"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "description": "snake bot !!!",
+    "private": true,
+    "overrides": {
+        "lzutf8": "0.6.3",
+        "readable-stream": "4.3.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.51.0",
+        "@typescript-eslint/parser": "^5.51.0",
+        "concurrently": "^7.6.0",
+        "eslint": "^8.7.0",
+        "eslint-plugin-unused-imports": "^2.0.0"
+    }
+}

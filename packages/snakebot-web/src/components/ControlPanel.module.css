@@ -1,0 +1,13 @@
+.control_panel {
+    background-color: #1f2229;
+    padding: 16px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 32px;
+    height: fit-content;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #494f5c;
+}

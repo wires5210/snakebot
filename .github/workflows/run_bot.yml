@@ -1,0 +1,24 @@
+name: run bot
+
+on:
+    workflow_dispatch:
+    # schedule:
+    # - cron: '30 * * * *'
+
+jobs:
+    run-bot:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  cache: 'npm'
+            - run: npm i --no-audit
+            - run: npm run start-bot
+              env:
+                  BOT_USERNAME: ${{ secrets.BOT_USERNAME}}
+                  BOT_INSTANCE_URL: ${{ secrets.BOT_INSTANCE_URL}}
+                  BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN}}
+                  BOT_POST_PRIVATELY: ${{ secrets.BOT_POST_PRIVATELY}}
