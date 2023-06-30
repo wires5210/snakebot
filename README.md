@@ -16,3 +16,15 @@ check it out at https://botsin.space/@snake_game
 snakebot-masto requires some environment variables to be either defined, or provided in a .env file in its folder
 
 if you're on an arm-based mac, node-canvas might give you some trouble when installing.. try `brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman` to install its dependencies, then `npm i`. at least that's what the [node-canvas repo](https://github.com/Automattic/node-canvas) says in the installation instructions. though that didn't work for me without also running `PKG_CONFIG_PATH='/opt/homebrew/Cellar/pango/1.50.12/lib/pkgconfig:/opt/homebrew/Cellar/fribidi/1.0.12/lib/pkgconfig' npm i`. maybe it'll work for you without that though. idk
+
+# help how does it actually work your code is incomprehensible
+1. searches for the last post by the bot user that begins with the game's, as well as the bot's replies to it
+    - the header matches the pattern `/^➡ (.+) - GAME (\d+) (END )?⬅️/`
+2. decodes the game's state from the invisible text in the post's text
+    - the text is made out of the characters U+2061, U+2062, U+2063, U+2064
+    - check `hiddenEncode.ts` for how exactly it works
+3. checks the result of the poll to decide where to move next
+    - if the poll is tied, the topmost option is picked
+    - the snake's current direction is always at the top, so if no one votes, the snake keeps moving forward
+4. update's the game's state and posts the next image and poll
+    - they have to be in separate posts because mastodon doesn't allow having both an image and a poll in one ..
