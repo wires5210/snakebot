@@ -11,6 +11,15 @@
         "sourceType": "module",
         "project": ["./tsconfig.json", "./packages/*/tsconfig.json"]
     },
+    "overrides": [
+        {
+            "files": "*.test.js",
+            "env": { "jest": true },
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        }
+    ],
     "plugins": ["@typescript-eslint", "unused-imports"],
     "rules": {
         "arrow-body-style": ["warn", "as-needed"],

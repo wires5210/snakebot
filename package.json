@@ -11,7 +11,8 @@
         "start-bot": "npm run -w snakebot-core build && npm run -w snakebot-masto start",
         "start-web": "concurrently -c auto -n 'core,web' 'npm run -w snakebot-core watch' 'npm run -w snakebot-web start'",
         "lint-all": "npm run lint --workspaces",
-        "format-all": "npm run format --workspaces"
+        "format-all": "npm run format --workspaces",
+        "test": "npm -w snakebot-core test"
     },
     "workspaces": [
         "packages/*"
@@ -23,6 +24,7 @@
         "readable-stream": "4.3.0"
     },
     "devDependencies": {
+        "@types/jest": "^29.5.2",
         "@typescript-eslint/eslint-plugin": "^5.51.0",
         "@typescript-eslint/parser": "^5.51.0",
         "concurrently": "^7.6.0",
