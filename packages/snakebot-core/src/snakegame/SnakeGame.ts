@@ -3,15 +3,12 @@ import { highestVoted } from '../utils'
 import { SnakeGrid, SnakeMoveResult } from './SnakeGrid'
 import { getDirectionFromPoll, makePoll, SnakePollOption } from './poll'
 import { drawSnek } from './drawSnek'
-import stegosaurus from 'stegcloak'
 import { dedent } from 'ts-dedent'
-
-const stegPassword = 'whomst'
-const steg = new stegosaurus(false, false)
+import { hiddenDecode, hiddenEncode } from './hiddenEncode'
 
 function makeRound(grid: SnakeGrid, gameStatus: SnakeMoveResult): OutgoingRound {
-    const encodedGrid = grid.stringify()
-    const whitespaceGrid = steg.hide(encodedGrid, stegPassword, '- -')
+    const hiddenGrid = hiddenEncode(grid.stringify())
+
     let content: string
     switch (gameStatus) {
         case 'u survived':
@@ -19,7 +16,7 @@ function makeRound(grid: SnakeGrid, gameStatus: SnakeMoveResult): OutgoingRound 
 
                              📊 ⬇️ Vote to move - poll in the replies!
 
-                             -${whitespaceGrid}-`
+                             --${hiddenGrid}--`
             break
 
         case 'u died':
@@ -78,11 +75,10 @@ export const SnakeGame: Game<SnakeGrid> = {
     },
 
     async reconstruct(from) {
-        const steg = new stegosaurus(false, false)
         const text = from.toots[0].content
 
-        const gridEncodedText = text.match(/-(.+)-/)![1]
-        const gridText = steg.reveal(gridEncodedText, stegPassword)
+        const hiddenGridText = text.match(/--(.+)--/)![1]
+        const gridText = hiddenDecode(hiddenGridText)
         const grid = SnakeGrid.unstringify(gridText)
 
         const poll = from.toots[1].pollResults!

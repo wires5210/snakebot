@@ -14,14 +14,9 @@
     "devDependencies": {
         "@types/html-to-text": "^9.0.0",
         "@types/lodash": "^4.14.191",
-        "@types/stegcloak": "^1.0.0",
         "eslint": "^8.34.0",
         "prettier": "^2.8.4",
         "typescript": "^4.9.5"
-    },
-    "overrides": {
-        "lzutf8": "0.6.3",
-        "readable-stream": "4.3.0"
     },
     "dependencies": {
         "canvas": "^2.11.0",
@@ -31,7 +26,6 @@
         "html-to-text": "^9.0.4",
         "lodash": "^4.17.21",
         "masto": "^5.9.1",
-        "snakebot-core": "*",
-        "stegcloak": "^1.1.1"
+        "snakebot-core": "*"
     }
 }
