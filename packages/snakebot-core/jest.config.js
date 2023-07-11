@@ -3,7 +3,7 @@ export default {
     preset: 'ts-jest',
     testEnvironment: 'node',
     verbose: true,
-    
+
     // this is frankly horrifying, and it should be
     // considered a crime that i have to do this at all
     // taken from https://kulshekhar.github.io/ts-jest/docs/guides/esm-support
