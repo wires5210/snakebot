@@ -1,7 +1,6 @@
 import { mastodon } from 'masto'
 import { OutgoingRound } from 'snakebot-core'
-import { createCanvas } from 'canvas'
-import getStream from 'get-stream'
+import { createCanvas } from '@napi-rs/canvas'
 
 const postVisibility = process.env.BOT_POST_PRIVATELY === 'true' ? 'private' : 'public'
 
@@ -21,13 +20,11 @@ export async function postRound(client: mastodon.Client, round: OutgoingRound): 
                 const canvas = createCanvas(t.image.width, t.image.height)
                 const context = canvas.getContext('2d')
 
-                //@ts-expect-error it's not *entirely* compatible with canvas, but it works
+                //@ts-expect-error it's not *entirely* compatible with web canvas, but it works
                 t.image.draw(context)
 
-                const stream = canvas.createPNGStream()
-                const buffer = await getStream.buffer(stream)
-
-                console.log('uploading image..')
+                const buffer = canvas.toBuffer('image/png')
+                console.log(`uploading image.. (buffer is ${buffer.length} bytes long)`)
                 const uploaded = await client.v1.mediaAttachments.create({
                     file: new Blob([buffer]),
                     description: t.image.altText,

@@ -81,7 +81,9 @@ export function drawSnek(
             ctx.fill()
 
             // point the eye toward the apple
-            const eyePosition = ctx.getTransform().transformPoint({ x: 0, y: 0 })
+            // at the moment, @napi-rs/canvas requires z and w coordinates to be present
+            // otherwise transformPoint returns NaNs
+            const eyePosition = ctx.getTransform().transformPoint({ x: 0, y: 0, z: 0, w: 1 })
             const applePosition = tileToCoords(grid.appleCoords)
             applePosition[0] += horizontalPadding
             const eyeAngle =

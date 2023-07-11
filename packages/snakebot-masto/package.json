@@ -19,9 +19,8 @@
         "typescript": "^4.9.5"
     },
     "dependencies": {
-        "canvas": "^2.11.0",
+        "@napi-rs/canvas": "^0.1.41",
         "dotenv": "^16.0.3",
-        "get-stream": "^6.0.1",
         "html-to-text": "^9.0.4",
         "lodash": "^4.17.21",
         "masto": "^5.9.1"
