@@ -7,7 +7,7 @@
         "moduleResolution": "NodeNext",
         "declaration": true,
         "sourceMap": true,
-        "outDir": "dist",
+        "outDir": "build",
         "lib": ["ESNext", "DOM"]
     },
     "include": ["./src", "./test"]
