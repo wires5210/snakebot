@@ -11,8 +11,7 @@
         "build": "tsc --build",
         "watch": "tsc --watch --preserveWatchOutput",
         "lint": "tsc --noEmit && eslint . --fix",
-        "test": "jest",
-        "format": "prettier -w ."
+        "test": "jest"
     },
     "dependencies": {
         "chance": "^1.1.9",
