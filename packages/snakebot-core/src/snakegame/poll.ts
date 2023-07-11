@@ -1,4 +1,4 @@
-import { SnakeDirection, GridContents } from './SnakeGrid'
+import { SnakeDirection, GridContents } from './SnakeGrid.js'
 
 export type SnakePollOption = '⬆️ Move up' | '⬇️ Move down' | '⬅️ Move left' | '➡️ Move right'
 

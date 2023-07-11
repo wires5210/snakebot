@@ -1,11 +1,11 @@
 import { config as dotenv } from 'dotenv'
 import { login, mastodon } from 'masto'
-import { getHeader, hasHeader, addHeader } from './roundHeaders'
+import { getHeader, hasHeader, addHeader } from './roundHeaders.js'
 
-import { constructRound, getFirstRound, getSubsequentRound } from './roundMaking'
+import { constructRound, getFirstRound, getSubsequentRound } from './roundMaking.js'
 import { SnakeGame } from 'snakebot-core'
-import { postRound } from './roundPosting'
-import { htmlToPlaintext } from './utils'
+import { postRound } from './roundPosting.js'
+import { htmlToPlaintext } from './utils.js'
 
 import dns from 'dns'
 dns.setDefaultResultOrder('ipv4first')

@@ -1,2 +1,2 @@
-export * from './Game'
-export * from './snakegame/index'
+export * from './Game.js'
+export * from './snakegame/index.js'

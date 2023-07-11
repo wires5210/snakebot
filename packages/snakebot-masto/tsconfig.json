@@ -4,11 +4,12 @@
     "compilerOptions": {
         "composite": true,
         "rootDir": "src",
-        "moduleResolution": "node",
+        "moduleResolution": "nodenext",
         "declaration": true,
         "sourceMap": true,
-        "outDir": "dist",
-        "lib": ["ESNext", "DOM"]
+        "outDir": "build",
+        "lib": ["ESNext", "DOM"],
+        "incremental": true
     },
     "include": ["./src"],
     "references": [

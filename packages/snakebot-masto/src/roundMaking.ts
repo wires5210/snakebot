@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { mastodon } from 'masto'
 import { Game, IncomingRound, IncomingPost, OutgoingRound, PollResults } from 'snakebot-core'
-import { htmlToPlaintext } from './utils'
+import { htmlToPlaintext } from './utils.js'
 
 function makeIncomingToot(from: mastodon.v1.Status): IncomingPost {
     let poll: PollResults | undefined

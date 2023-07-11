@@ -1,4 +1,4 @@
-import { SnakeDirection, SnakeGrid, TileCoords } from './SnakeGrid'
+import { SnakeDirection, SnakeGrid, TileCoords } from './SnakeGrid.js'
 
 function directionToRadians(dir: SnakeDirection): number {
     switch (dir) {

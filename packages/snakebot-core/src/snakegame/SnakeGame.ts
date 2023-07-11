@@ -1,10 +1,10 @@
-import { Game, Image, OutgoingRound, OutgoingPost } from '../Game'
-import { highestVoted } from '../utils'
-import { SnakeGrid, SnakeMoveResult } from './SnakeGrid'
-import { getDirectionFromPoll, makePoll, SnakePollOption } from './poll'
-import { drawSnek } from './drawSnek'
+import { Game, Image, OutgoingRound, OutgoingPost } from '../Game.js'
+import { highestVoted } from '../utils.js'
+import { SnakeGrid, SnakeMoveResult } from './SnakeGrid.js'
+import { getDirectionFromPoll, makePoll, SnakePollOption } from './poll.js'
+import { drawSnek } from './drawSnek.js'
 import { dedent } from 'ts-dedent'
-import { hiddenDecode, hiddenEncode } from './hiddenEncode'
+import { hiddenDecode, hiddenEncode } from './hiddenEncode.js'
 
 function makeRound(grid: SnakeGrid, gameStatus: SnakeMoveResult): OutgoingRound {
     const hiddenGrid = hiddenEncode(grid.stringify())

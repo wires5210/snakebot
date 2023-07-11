@@ -6,8 +6,8 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "start": "npm run build && node --enable-source-maps build/bundle.js",
-        "build": "node esbuild.js",
+        "start": "npm run build && node --enable-source-maps build/index.js",
+        "build": "tsc -p ./tsconfig.json",
         "lint": "tsc --noEmit && eslint . --fix",
         "format": "prettier -w ."
     },
@@ -21,11 +21,9 @@
     "dependencies": {
         "canvas": "^2.11.0",
         "dotenv": "^16.0.3",
-        "esbuild": "^0.17.18",
         "get-stream": "^6.0.1",
         "html-to-text": "^9.0.4",
         "lodash": "^4.17.21",
-        "masto": "^5.9.1",
-        "snakebot-core": "*"
+        "masto": "^5.9.1"
     }
 }
